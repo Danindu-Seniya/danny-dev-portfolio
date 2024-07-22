@@ -15,34 +15,30 @@ import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
 const about = {
   title: "About me",
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores animi tempora necessitatibus est quod deserunt ea similique.",
+    "Passionate software developer with over 2 years of experience, fluent in English and Sinhala, and dedicated to delivering impactful solutions.",
   info: [
     {
-      fieldName: "Name",
+      fieldName: "Name:",
       fieldValue: "Danindu Nawarathna",
     },
     {
-      fieldName: "Phone",
-      fieldValue: "(+94) 123 1234 12",
+      fieldName: "Gender:",
+      fieldValue: "Male",
     },
     {
-      fieldName: "Experience",
-      fieldValue: "3+ Years",
-    },
-    {
-      fieldName: "Nationality",
+      fieldName: "Nationality:",
       fieldValue: "Sri Lankan",
     },
     {
-      fieldName: "Email",
+      fieldName: "Residence:",
+      fieldValue: "Colombo, Sri Lanka.",
+    },
+    {
+      fieldName: "Email:",
       fieldValue: "danindunawa@gmail.com",
     },
     {
-      fieldName: "Freelance",
-      fieldValue: "Available",
-    },
-    {
-      fieldName: "Languages",
+      fieldName: "Languages:",
       fieldValue: "English, Sinhala",
     },
   ],
@@ -53,7 +49,7 @@ const experience = {
   icon: "/assets/resume/badge.svg",
   title: "My experience",
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores animi tempora necessitatibus est quod deserunt ea similique.",
+    "Through roles in software development, leadership, and community engagement, my experience showcases a well-rounded skill set.",
   items: [
     {
       company: "Creativo Code",
@@ -61,7 +57,7 @@ const experience = {
       duration: "2023 - 2024",
     },
     {
-      company: "ACICTS",
+      company: "Ananda College ICT Society",
       position: "President",
       duration: "2019 - 2020",
     },
@@ -69,6 +65,11 @@ const experience = {
       company: "ACPAS",
       position: "Main Event Co-ordinator",
       duration: "2019 - 2020",
+    },
+    {
+      company: "Mozilla Campus Club of IIT",
+      position: "Volunteer",
+      duration: "2023 - 2024",
     },
   ],
 };
@@ -78,10 +79,10 @@ const education = {
   icon: "/assets/resume/cap.svg",
   title: "My education",
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores animi tempora necessitatibus est quod deserunt ea similique.",
+    "From physical sciences in high school to a software engineering degree, my education has built a solid technical foundation.",
   items: [
     {
-      institution: "University of Westminster, London, United Kingdom.",
+      institution: "University of Westminster, United Kingdom.",
       degree: "BEng (Hons) Software Engineering",
       duration: "2023 - 2026",
     },
@@ -90,11 +91,6 @@ const education = {
       degree: "Ordinary Level & Advanced Level in Physical Science Stream",
       duration: "2011 - 2020",
     },
-    {
-      institution: "ACICTS",
-      degree: "President",
-      duration: "2019 - 2020",
-    },
   ],
 };
 
@@ -102,7 +98,7 @@ const education = {
 const skills = {
   title: "My skills",
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores animi tempora necessitatibus est quod deserunt ea similique.",
+    "Broad technical knowledge in programming languages, frameworks, and databases, combined with proficiency in essential development tools and libraries.",
   skillList: [
     {
       icon: <FaHtml5 />,
@@ -170,7 +166,7 @@ const Resume = () => {
           <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
           <div>
             <h1 className="text-5xl font-bold text-white">Why hire me?</h1>
-          <p className="text-white/60 py-3">Im a paragraph. Click here to add your own text and edit me.</p>
+          <p className="text-white/60 py-3">I am a passionate developer ready to tackle challenges and deliver results.</p>
           </div>
             <TabsTrigger value="experience">Experience</TabsTrigger>
             <TabsTrigger value="education">Education</TabsTrigger>
@@ -179,7 +175,7 @@ const Resume = () => {
           </TabsList>
 
           {/* content */}
-          <div className="min-h-[70vh] w-full">
+          <div className="min-h-[80vh] w-full">
             {/* experience */}
             <TabsContent value="experience" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left ">
@@ -193,7 +189,7 @@ const Resume = () => {
                       return (
                         <li
                           key={index}
-                          className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                          className="bg-[#232329] h-[170px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
                         >
                           <span className="text-accent">{item.duration}</span>
                           <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
@@ -225,7 +221,7 @@ const Resume = () => {
                       return (
                         <li
                           key={index}
-                          className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                          className="bg-[#232329] h-[170px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
                         >
                           <span className="text-accent">{item.duration}</span>
                           <h3 className="text-xl max-w-[400px] min-h-[60px] text-center lg:text-left">
@@ -286,7 +282,7 @@ const Resume = () => {
                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
                   {about.description}
                 </p>
-                <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
+                <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 xl:gap-x-12 max-w-[620px] lg:max-w-[700px] mx-auto xl:mx-0">
                   {about.info.map((item, index) => {
                     return (
                       <li key={index} className="flex items-center justify-center xl:justify-start gap-4">
