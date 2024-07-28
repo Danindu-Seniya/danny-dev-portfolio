@@ -22,9 +22,9 @@ const projects = [
     description:
       " Virtual assistance system for shopping malls to enhance shopping experience.",
     stack: [{ name: "ReactNative/Expo" }, { name: "TypeScript" }, { name: "Firebase" }, { name: "Unity" }, { name: "Nativewind" }],
-    image: "/assets/work/shopmate.png",
-    live: "",
-    github: "",
+    image: "/assets/work/shopmate1.png",
+    live: "https://shopmate.framer.website/",
+    github: "https://github.com/Danindu-Seniya/ShopMate",
   },
   {
     num: "02",
@@ -32,20 +32,20 @@ const projects = [
     title: "Nexus Spices",
     description:
       " Interactive and responsive website for a spice exporting company to showcase the products.",
-    stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "JavaScript" }],
-    image: "/assets/work/thumb2.png",
-    live: "",
+    stack: [{ name: "Next.js" }, { name: "TypeScript" }, { name: "Tailwind CSS" }, { name: "Sanity" }, { name: "Vercel" }],
+    image: "/assets/work/nexus.png",
+    live: "https://spices.nexusagro.lk/",
     github: "",
   },
   {
     num: "03",
     category: "full-stack",
-    title: "Project 3",
+    title: "Creativo Code Website",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, dolores. Aspernatur officia iste fugiat quod.",
-    stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "JavaScript" }],
-    image: "/assets/work/thumb3.png",
-    live: "",
+      "Collaborated in developing a website for a creative frontend development agency.",
+    stack: [{ name: "Next.js" }, { name: "TypeScript" }, { name: "Tailwind CSS" }, { name: "Framer-motion" }, { name: "Vercel" },],
+    image: "/assets/work/creativocode.png",
+    live: "https://www.creativo-code.com/",
     github: "",
   },
 ];
@@ -137,15 +137,17 @@ const Projects = () => {
               {projects.map((project, index) => {
                 return (
                   <SwiperSlide key={index} className="w-full">
-                    <div className="h-[460px] relative group flex justify-center items-center bg-pink-50/20">
+                    <div className="h-fit relative group flex justify-center items-center bg-pink-50/20">
                       {/* overlay */}
                       <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
                       {/* image */}
                       <div className="relative w-full h-full">
                         <Image
                           src={project.image}
-                          fill
-                          className="object-cover"
+                          layout="intrinsic"
+                          width={1900}
+                          height={910}
+                          className=""
                           alt=""
                         />
                       </div>
