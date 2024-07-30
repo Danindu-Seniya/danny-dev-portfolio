@@ -22,7 +22,7 @@ export default function Home() {
             </p>
             {/* download resume button and socials */}
             <div className="flex flex-col xl:flex-row items-center gap-8">
-            <Link href="https://drive.google.com/file/d/1iOJyy5ZXrWHJOBjSWNJ633fL3SSqIM6H/view?usp=sharing" target="_blank" rel="noopener noreferrer" passHref>
+            <Link href="https://drive.google.com/file/d/1qONGMEXbgyvzAtBcajSxusQBpY-DKwxX/view?usp=sharing" target="_blank" rel="noopener noreferrer" passHref>
               <Button
                 variant="outline"
                 size="lg"
