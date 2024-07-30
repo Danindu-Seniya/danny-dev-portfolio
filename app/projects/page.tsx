@@ -28,7 +28,7 @@ const projects = [
       { name: "Unity" },
       { name: "Nativewind" },
     ],
-    image: "/assets/work/shopmate-m2.png",
+    image: "/assets/work/shopmate.png",
     live: "https://shopmate.framer.website/",
     github: "https://github.com/Danindu-Seniya/ShopMate",
   },
@@ -45,7 +45,7 @@ const projects = [
       { name: "Sanity" },
       { name: "Vercel" },
     ],
-    image: "/assets/work/nexus1.png",
+    image: "/assets/work/nexus.png",
     live: "https://spices.nexusagro.lk/",
     github: "",
   },
@@ -62,8 +62,25 @@ const projects = [
       { name: "Framer-motion" },
       { name: "Vercel" },
     ],
-    image: "/assets/work/creativocode1.png",
+    image: "/assets/work/creativocode.png",
     live: "https://www.creativo-code.com/",
+    github: "",
+  },
+  {
+    num: "04",
+    category: "full-stack",
+    title: "Abdeen Jewellers (Ongoing)",
+    description:
+      " Currently developing a dynamic and user-friendly website for a jewellery shop to showcase their products.",
+    stack: [
+      { name: "Next.js" },
+      { name: "TypeScript" },
+      { name: "Tailwind CSS" },
+      { name: "Framer-motion" },
+      { name: "Vercel" },
+    ],
+    image: "/assets/work/abdeen.png",
+    live: "https://abdeen-jewellers.vercel.app/",
     github: "",
   },
 ];
@@ -130,6 +147,7 @@ const Projects = () => {
                   </TooltipProvider>
                 </Link>
                 {/* github button */}
+                {project.github && (
                 <Link href={project.github}>
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
@@ -142,6 +160,7 @@ const Projects = () => {
                     </Tooltip>
                   </TooltipProvider>
                 </Link>
+                )}
               </div>
             </div>
           </div>
