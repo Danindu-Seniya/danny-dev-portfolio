@@ -21,8 +21,14 @@ const projects = [
     title: "ShopMate(Mobile Application)",
     description:
       " Virtual assistance system for shopping malls to enhance shopping experience.",
-    stack: [{ name: "ReactNative/Expo" }, { name: "TypeScript" }, { name: "Firebase" }, { name: "Unity" }, { name: "Nativewind" }],
-    image: "/assets/work/shopmate1.png",
+    stack: [
+      { name: "ReactNative/Expo" },
+      { name: "TypeScript" },
+      { name: "Firebase" },
+      { name: "Unity" },
+      { name: "Nativewind" },
+    ],
+    image: "/assets/work/shopmate-m2.png",
     live: "https://shopmate.framer.website/",
     github: "https://github.com/Danindu-Seniya/ShopMate",
   },
@@ -32,8 +38,14 @@ const projects = [
     title: "Nexus Spices",
     description:
       " Interactive and responsive website for a spice exporting company to showcase the products.",
-    stack: [{ name: "Next.js" }, { name: "TypeScript" }, { name: "Tailwind CSS" }, { name: "Sanity" }, { name: "Vercel" }],
-    image: "/assets/work/nexus.png",
+    stack: [
+      { name: "Next.js" },
+      { name: "TypeScript" },
+      { name: "Tailwind CSS" },
+      { name: "Sanity" },
+      { name: "Vercel" },
+    ],
+    image: "/assets/work/nexus1.png",
     live: "https://spices.nexusagro.lk/",
     github: "",
   },
@@ -43,8 +55,14 @@ const projects = [
     title: "Creativo Code Website",
     description:
       "Collaborated in developing a website for a creative frontend development agency.",
-    stack: [{ name: "Next.js" }, { name: "TypeScript" }, { name: "Tailwind CSS" }, { name: "Framer-motion" }, { name: "Vercel" },],
-    image: "/assets/work/creativocode.png",
+    stack: [
+      { name: "Next.js" },
+      { name: "TypeScript" },
+      { name: "Tailwind CSS" },
+      { name: "Framer-motion" },
+      { name: "Vercel" },
+    ],
+    image: "/assets/work/creativocode1.png",
     live: "https://www.creativo-code.com/",
     github: "",
   },
@@ -78,7 +96,7 @@ const Projects = () => {
               </div>
               {/* project title */}
               <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
-                {project.title} 
+                {project.title}
               </h2>
               {/* project description */}
               <p className="text-white/60">{project.description}</p>
@@ -137,9 +155,9 @@ const Projects = () => {
               {projects.map((project, index) => {
                 return (
                   <SwiperSlide key={index} className="w-full">
-                    <div className="h-fit relative group flex justify-center items-center bg-pink-50/20">
+                    <div className="h-fit relative group flex justify-center items-center ">
                       {/* overlay */}
-                      <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
+                      <div className="absolute top-0 bottom-0 w-full h-full  z-10"></div>
                       {/* image */}
                       <div className="relative w-full h-full">
                         <Image
@@ -160,7 +178,6 @@ const Projects = () => {
                 containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none"
                 btnStyles="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all"
                 iconsStyles="none"
-                
               />
             </Swiper>
           </div>
