@@ -77,7 +77,7 @@ const projects = [
       { name: "TypeScript" },
       { name: "Tailwind CSS" },
       { name: "Framer-motion" },
-      { name: "Vercel" },
+      { name: "Sanity" },
     ],
     image: "/assets/work/abdeen.png",
     live: "https://abdeen-jewellers.vercel.app/",

@@ -1,16 +1,29 @@
 "use client";
+import {useState, useEffect} from "react";
 import contactMe from "@/public/assets/contactMe.json";
 import Lottie from "lottie-react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+
+
 const Contact = () => {
+
+  const[showLottie, setShowLottie] = useState(false);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowLottie(true);
+    }, 2000);
+
+    return () => clearTimeout(timer); //Cleamup timer on component unmount
+    }, []);
+
   return (
     <section className="h-full">
       <div className="container mx-auto h-full">
-        <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-10 gap-8 ">
+        <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-2 gap-8">
           {/* text */}
-          <div className="text-center xl:text-left">
+          <div className="text-center xl:text-left max-w-xl">
             <span className="text-6xl text-accent">
               Let&rsquo;s Work Together!
             </span>
@@ -20,26 +33,34 @@ const Contact = () => {
               full-stack development, I am ready to help build solutions that
               enhance people&rsquo;s lives.
             </p>
-            <Link href="mailto:danindunawa@gmail.com" target="_blank" rel="noopener noreferrer" passHref>
-            <Button
+            <Link
+              href="mailto:danindunawa@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              passHref
+            >
+              <Button
                 variant="outline"
                 size="lg"
-                className="lowercase flex items-center gap-2 mt-10"
+                className="lowercase items-center gap-2 mt-10 "
               >
-                
                 <span>Email: danindunawa@gmail.com</span>
-          
               </Button>
-              </Link>
+            </Link>
+            </div>
 
-            {/* <motion.div
-              className=""
+            {/* Lottie Animation */}
+            <div className="w-[500px] h-[500px] items-center">
+            {showLottie &&(
+            <motion.div
+              className="flex "
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 1.0, duration: 0.4, ease: "easeInOut" }}
+              transition={{ duration: 0.4, ease: "easeInOut" }}
             >
-              <Lottie className="w-[300px] h-[300px]" animationData={contactMe} />
-            </motion.div> */}
+              <Lottie className="w-[500px] h-[500px]" animationData={contactMe} />
+            </motion.div>
+            )}
           </div>
         </div>
       </div>
