@@ -8,8 +8,23 @@ import {
   FaReact,
   FaFigma,
   FaNodeJs,
+  FaPython,
+  FaJava,
+  FaGithub,
 } from "react-icons/fa";
-import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
+import {
+  SiTailwindcss,
+  SiNextdotjs,
+  SiTypescript,
+  SiExpo,
+  SiFirebase,
+  SiMongodb,
+  SiMysql,
+  SiVercel,
+  SiSanity,
+  SiPostgresql,
+  SiExpress,
+} from "react-icons/si";
 
 //about data
 const about = {
@@ -101,6 +116,14 @@ const skills = {
     "Broad technical knowledge in programming languages, frameworks, and databases, combined with proficiency in essential development tools and libraries.",
   skillList: [
     {
+      icon: <FaPython />,
+      name: "Python",
+    },
+    {
+      icon: <FaJava />,
+      name: "Java",
+    },
+    {
       icon: <FaHtml5 />,
       name: "HTML5",
     },
@@ -111,6 +134,10 @@ const skills = {
     {
       icon: <FaJs />,
       name: "JavaScript",
+    },
+    {
+      icon: <SiTypescript />,
+      name: "TypeScript",
     },
     {
       icon: <FaReact />,
@@ -129,8 +156,44 @@ const skills = {
       name: "node.js",
     },
     {
+      icon: <SiExpress />,
+      name: "Express.js",
+    },
+    {
+      icon: <SiExpo />,
+      name: "Expo",
+    },
+    {
+      icon: <SiFirebase />,
+      name: "Firebase",
+    },
+    {
+      icon: <SiMongodb />,
+      name: "MongoDB",
+    },
+    {
+      icon: <SiPostgresql />,
+      name: "PostgreSQL",
+    },
+    {
+      icon: <SiMysql />,
+      name: "MySQL",
+    },
+    {
+      icon: <SiVercel />,
+      name: "Vercel",
+    },
+    {
+      icon: <SiSanity />,
+      name: "Sanity",
+    },
+    {
+      icon: <FaGithub />,
+      name: "Github",
+    },
+    {
       icon: <FaFigma />,
-      name: "figma",
+      name: "Figma",
     },
   ],
 };
@@ -158,16 +221,18 @@ const Resume = () => {
       className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0"
     >
       <div className="container mx-auto">
-        
         <Tabs
           defaultValue="experience"
           className="flex flex-col xl:flex-row gap-[60px]"
         >
           <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
-          <div>
-            <h1 className="text-5xl font-bold text-white">Why hire me?</h1>
-          <p className="text-white/60 py-3">I am a passionate developer ready to tackle challenges and deliver results.</p>
-          </div>
+            <div>
+              <h1 className="text-5xl font-bold text-white">Why hire me?</h1>
+              <p className="text-white/60 py-3">
+                I am a passionate developer ready to tackle challenges and
+                deliver results.
+              </p>
+            </div>
             <TabsTrigger value="experience">Experience</TabsTrigger>
             <TabsTrigger value="education">Education</TabsTrigger>
             <TabsTrigger value="skills">Skills</TabsTrigger>
@@ -249,26 +314,28 @@ const Resume = () => {
                     {skills.description}
                   </p>
                 </div>
-                <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
-                  {skills.skillList.map((skill, index) => {
-                    return (
-                      <li key={index}>
-                        <TooltipProvider delayDuration={100}>
-                          <Tooltip>
-                            <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group">
-                              <div className="text-6xl group-hover:text-accent transition-all duration-300">
-                                {skill.icon}
-                              </div>
-                            </TooltipTrigger>
-                            <TooltipContent>
-                              <p className="capitalize">{skill.name}</p>
-                            </TooltipContent>
-                          </Tooltip>
-                        </TooltipProvider>
-                      </li>
-                    );
-                  })}
-                </ul>
+                <ScrollArea className="h-[330px]">
+                  <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
+                    {skills.skillList.map((skill, index) => {
+                      return (
+                        <li key={index}>
+                          <TooltipProvider delayDuration={100}>
+                            <Tooltip>
+                              <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group">
+                                <div className="text-6xl group-hover:text-accent transition-all duration-300">
+                                  {skill.icon}
+                                </div>
+                              </TooltipTrigger>
+                              <TooltipContent>
+                                <p className="capitalize">{skill.name}</p>
+                              </TooltipContent>
+                            </Tooltip>
+                          </TooltipProvider>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </ScrollArea>
               </div>
             </TabsContent>
 
@@ -285,7 +352,10 @@ const Resume = () => {
                 <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 xl:gap-x-12 max-w-[620px] lg:max-w-[700px] mx-auto xl:mx-0">
                   {about.info.map((item, index) => {
                     return (
-                      <li key={index} className="flex items-center justify-center xl:justify-start gap-4">
+                      <li
+                        key={index}
+                        className="flex items-center justify-center xl:justify-start gap-4"
+                      >
                         <span className="text-white/60">{item.fieldName}</span>
                         <span className="text-xl">{item.fieldValue}</span>
                       </li>
