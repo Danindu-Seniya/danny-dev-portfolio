@@ -86,6 +86,11 @@ const experience = {
       position: "Volunteer",
       duration: "2023 - 2024",
     },
+    {
+      company: "Agastra Events",
+      position: "Event Co-ordinator",
+      duration: "2022 - 2024",
+    },
   ],
 };
 
